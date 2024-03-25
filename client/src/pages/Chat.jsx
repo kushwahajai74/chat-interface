@@ -10,14 +10,17 @@ const Chat = () => {
   const [delay, setDelay] = useState("1000");
   const socket = useMemo(
     () =>
-      io("http://localhost:3000", {
-        auth: {
-          token: localStorage.getItem("token"),
-        },
-        query: {
-          delay,
-        },
-      }),
+      io(
+        "http://chat-interface-api-env-1.eba-exxpwmmc.ap-south-1.elasticbeanstalk.com",
+        {
+          auth: {
+            token: localStorage.getItem("token"),
+          },
+          query: {
+            delay,
+          },
+        }
+      ),
     [delay]
   );
 
