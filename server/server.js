@@ -50,4 +50,4 @@ connectDB()
     process.exit(1);
   });
 
-export default app;
+export default server;

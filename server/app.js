@@ -19,7 +19,6 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: process.env.FRONTEND_URL,
-    methods: ["GET", "POST"],
     credentials: true,
   },
 });
@@ -33,17 +32,17 @@ app.use(
     credentials: true,
   })
 );
-io.use((socket, next) => {
-  try {
-    const token = socket.handshake.auth.token;
-    if (!token) return next(new ErrorHandler("Authentication Error"));
+// io.use((socket, next) => {
+//   try {
+//     const token = socket.handshake.auth.token;
+//     if (!token) return next(new ErrorHandler("Authentication Error"));
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    next();
-  } catch (error) {
-    return next(new ErrorHandler("Authentication Error"));
-  }
-});
+//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+//     next();
+//   } catch (error) {
+//     return next(new ErrorHandler("Authentication Error"));
+//   }
+// });
 
 import userRoutes from "./routes/userRoutes.js";
 import chatRoutes from "./routes/chatRoutes.js";
