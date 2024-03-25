@@ -6,7 +6,7 @@ import AuthProvider from "./Provider/AuthProvider.jsx";
 import axios from "axios";
 
 axios.defaults.baseURL =
-  "chat-interface-api-env-1.eba-exxpwmmc.ap-south-1.elasticbeanstalk.com/api/v1";
+  "http://chat-interface-api-env-1.eba-exxpwmmc.ap-south-1.elasticbeanstalk.com/api/v1";
 axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
