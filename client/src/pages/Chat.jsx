@@ -10,7 +10,7 @@ const Chat = () => {
   const [delay, setDelay] = useState("1000");
   const socket = useMemo(
     () =>
-      io("https://chat-interface-api.vercel.app", {
+      io("https://coral-app-wu5hd.ondigitalocean.app", {
         auth: {
           token: localStorage.getItem("token"),
         },

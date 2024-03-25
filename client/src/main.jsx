@@ -5,7 +5,7 @@ import "./index.css";
 import AuthProvider from "./Provider/AuthProvider.jsx";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://chat-interface-api.vercel.app/api/v1";
+axios.defaults.baseURL = "https://coral-app-wu5hd.ondigitalocean.app/api/v1";
 axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
