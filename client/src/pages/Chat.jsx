@@ -11,7 +11,7 @@ const Chat = () => {
   const socket = useMemo(
     () =>
       io(
-        "http://chat-interface-api-env-1.eba-exxpwmmc.ap-south-1.elasticbeanstalk.com",
+        "chat-interface-api-env-1.eba-exxpwmmc.ap-south-1.elasticbeanstalk.com",
         {
           auth: {
             token: localStorage.getItem("token"),
