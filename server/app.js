@@ -51,6 +51,7 @@ import chatRoutes from "./routes/chatRoutes.js";
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/main", isAuthenticated, chatRoutes);
 
-export { app, server, io };
+export { server, io };
+export default app;
 
 app.use(ErrorMiddleWare);

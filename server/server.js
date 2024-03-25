@@ -1,5 +1,4 @@
-import { set } from "mongoose";
-import { app, io, server } from "./app.js";
+import app, { io, server } from "./app.js";
 import connectDB from "./config/connectDB.js";
 
 app.get("/", (req, res) =>
