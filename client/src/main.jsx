@@ -5,7 +5,7 @@ import "./index.css";
 import AuthProvider from "./Provider/AuthProvider.jsx";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3000/api/v1";
+axios.defaults.baseURL = "https://chat-interface-backend.vercel.app/api/v1";
 axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
