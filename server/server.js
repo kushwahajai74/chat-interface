@@ -49,3 +49,5 @@ connectDB()
     console.log(err);
     process.exit(1);
   });
+
+export default server;
